@@ -15,7 +15,7 @@ class TelegramBot
     }
 
     protected function setHeaders(){
-        $this->headerss=[
+        $this->headers=[
             "Content-Type"=>"application/json",
             "Accept"=>"application/json",
         ];
