@@ -21,7 +21,7 @@ class TelegramBot
         ];
     }
 
-    protected function sendMessage($text='', $chat_id, $reply_to_message_id){
+    public function sendMessage($text='', $chat_id, $reply_to_message_id){
         
         //Default result array
         $result=['success'=>false, 'body'=>[]]; 
