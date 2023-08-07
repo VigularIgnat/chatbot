@@ -40,7 +40,7 @@ class TelegramBot
             $result=['success'=>$response->ok(), 'body'=>$response->json()]; 
 
         }catch(\Throwable $th){
-            $result['error']=$th->getMessage;
+            $result['error']=$th->getMessage();
         }
         \Log::info('TelegramBot->sendMessage->result',['result'=>$result]);
         return $result;
