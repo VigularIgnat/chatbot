@@ -9,8 +9,8 @@ class TelegramBot
     protected $headers;
 
     public function __construct(){
-        $this->token=env(TELEGRAM_BOT_USER);
-        $this->api_endpoint=env(TELEGRAM_API_ENDPOINT);
+        $this->token=env('TELEGRAM_BOT_USER');
+        $this->api_endpoint=env('TELEGRAM_API_ENDPOINT');
         $this->setHeaders();
     }
 
