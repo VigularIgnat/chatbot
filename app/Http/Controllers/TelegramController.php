@@ -29,6 +29,6 @@ class TelegramController extends Controller
         //$telegram_bot=new \App\Services\TelegramBot();
         $result=app('telegram_bot')->sendMessage($text, $chat_id,$reply_to_message);
         
-        return responce()->json($result,200);
+        return response()->json($result,200);
     }
 }
