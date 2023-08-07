@@ -19,6 +19,6 @@ use App\Http\Controllers\TelegramController;
 });*/
 
 //telegram webhooks
-Route::prefix('telegram/webhooks')->group(function(Request $request){
+Route::prefix('telegram/webhooks')->group(function(){
     Route::post('inbound',[TelegramController::class, 'inbound'])->name('telegram.inbound');
 });
