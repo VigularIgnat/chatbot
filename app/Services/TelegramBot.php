@@ -43,6 +43,7 @@ class TelegramBot
             $result['error']=$th->getMessage();
         }
         \Log::info('TelegramBot->sendMessage->result',['result'=>$result]);
+        \Log::info($url."   ",$params);
         return $result;
     }
 }
