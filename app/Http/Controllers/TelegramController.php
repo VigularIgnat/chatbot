@@ -11,8 +11,8 @@ class TelegramController extends Controller
         $chat_id=$request->message['from']['id'];
         $reply_to_message= $request->message['message_id'];
 
-        \Log::info($chat_id);
-        \Log::info($reply_to_message);
+        //\Log::info($chat_id);
+        //\Log::info($reply_to_message);
 
         if(!cache()->has("chat_id{{$chat_id}}")){
             $text= "Welcome to Ihnat projects 🤖\r\n";
@@ -22,7 +22,7 @@ class TelegramController extends Controller
         }
         
         else{
-            $text='ImageDetectbot 🤖 \r\n\r\n Please upload an image';
+            $text="ImageDetectbot 🤖 \r\n\r\n Please upload an image";
         }
 
         //telegram service sendMessage($chat_id,$text,$reply_to_message)
