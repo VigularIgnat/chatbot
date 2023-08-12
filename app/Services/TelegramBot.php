@@ -10,7 +10,9 @@ class TelegramBot
 
     public function __construct(){
         $this->token=env('TELEGRAM_BOT_USER');
+        \Log::info('token',['token'=>$this->token]);
         $this->api_endpoint=env('TELEGRAM_API_ENDPOINT');
+        \Log::info('api',['api'=> $this->api_endpoint]);
         $this->setHeaders();
     }
 
