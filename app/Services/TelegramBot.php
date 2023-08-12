@@ -34,6 +34,7 @@ class TelegramBot
         ];
 
         $url="{$this->api_endpoint}/{$this->token}/sendMessage";
+        \Log::info('url',['url'=>$url]);
         //Send the request
         try{
             $response=Http::withHeaders($this->headers)->post($url, $params);
