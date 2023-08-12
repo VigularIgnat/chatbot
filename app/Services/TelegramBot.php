@@ -28,9 +28,9 @@ class TelegramBot
 
         //Create params array
         $params=[
-            'chat_id'           =>$chat_id,
-            'reply_to_message_id'  =>$reply_to_message_id,
-            'text'           =>$text
+            "chat_id"          =>$chat_id,
+            "reply_to_message_id"  =>$reply_to_message_id,
+            "text"          =>$text
         ];
 
         $url="{$this->api_endpoint}/{$this->token}/sendMessage";
@@ -43,7 +43,7 @@ class TelegramBot
             $result['error']=$th->getMessage();
         }
         \Log::info('TelegramBot->sendMessage->result',['result'=>$result]);
-        \Log::info("url",$url);
+        
         return $result;
     }
 }
